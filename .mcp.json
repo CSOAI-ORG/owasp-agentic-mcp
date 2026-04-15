@@ -1,0 +1,52 @@
+{
+  "name": "owasp-agentic-mcp",
+  "description": "OWASP Top 10 for AI Agents security assessment tools. Capabilities: full agent security scan, prompt injection detection, tool poisoning check, excessive agency, data leakage. Built by MEOK AI Labs.",
+  "version": "1.0.0",
+  "tools": [
+    {
+      "name": "assess_agent_security",
+      "description": "Full OWASP Agentic AI Top 10 security assessment",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    },
+    {
+      "name": "check_prompt_injection",
+      "description": "Check text for prompt injection attack patterns",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    },
+    {
+      "name": "check_tool_poisoning",
+      "description": "Check a tool for name/description manipulation",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    },
+    {
+      "name": "check_excessive_agency",
+      "description": "Assess agent for excessive permissions (least privilege)",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    },
+    {
+      "name": "check_data_leakage",
+      "description": "Assess cross-context data exposure risks",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    }
+  ]
+}

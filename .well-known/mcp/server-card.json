@@ -1,0 +1,57 @@
+{
+  "name": "OWASP Agentic AI Security",
+  "description": "By MEOK AI Labs -- Security assessment based on OWASP Top 10 for Agentic AI (2025). Check for prompt injection, tool poisoning, excessive agency, and cross-context data leakage.",
+  "version": "1.0.0",
+  "protocol_version": "2025-11-25",
+  "publisher": {
+    "name": "MEOK AI Labs",
+    "url": "https://meok.ai",
+    "email": "nicholas@meok.ai"
+  },
+  "repository": "https://github.com/CSOAI-ORG/owasp-agentic-mcp",
+  "license": "MIT",
+  "transport": [
+    "stdio",
+    "streamable-http"
+  ],
+  "authentication": {
+    "type": "api-key",
+    "free_tier": true,
+    "free_limit": "10 calls/day"
+  },
+  "tools": [
+    {
+      "name": "assess_agent_security",
+      "description": "Full OWASP Agentic AI Top 10 security assessment"
+    },
+    {
+      "name": "check_prompt_injection",
+      "description": "Check text for prompt injection attack patterns"
+    },
+    {
+      "name": "check_tool_poisoning",
+      "description": "Check a tool for name/description manipulation"
+    },
+    {
+      "name": "check_excessive_agency",
+      "description": "Assess agent for excessive permissions (least privilege)"
+    },
+    {
+      "name": "check_data_leakage",
+      "description": "Assess cross-context data exposure risks"
+    }
+  ],
+  "categories": [
+    "AI & Machine Learning",
+    "Security & Compliance"
+  ],
+  "pricing": {
+    "free": {
+      "calls_per_day": 10
+    },
+    "pro": {
+      "price": "$29/month",
+      "url": "https://meok.ai/pricing"
+    }
+  }
+}
