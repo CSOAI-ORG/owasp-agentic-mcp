@@ -1,3 +1,5 @@
+[![owasp-agentic-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/owasp-agentic-mcp/badges/card.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/owasp-agentic-mcp)
+
 <div align="center">
 
 [![PyPI](https://img.shields.io/pypi/v/owasp-agentic-mcp)](https://pypi.org/project/owasp-agentic-mcp/)
