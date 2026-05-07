@@ -167,6 +167,21 @@ def assess_agent_security(
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        agent_name (str): The agent name to analyze or process.
+        has_input_validation (bool): The has input validation to analyze or process.
+        has_output_filtering (bool): The has output filtering to analyze or process.
+        has_tool_allowlist (bool): The has tool allowlist to analyze or process.
+        has_least_privilege (bool): The has least privilege to analyze or process.
+        has_context_isolation (bool): The has context isolation to analyze or process.
+        has_action_logging (bool): The has action logging to analyze or process.
+        has_auth_between_agents (bool): The has auth between agents to analyze or process.
+        has_resource_limits (bool): The has resource limits to analyze or process.
+        has_dependency_scanning (bool): The has dependency scanning to analyze or process.
+        has_alignment_testing (bool): The has alignment testing to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -255,6 +270,11 @@ def check_prompt_injection(
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        input_text (str): The input text to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -349,6 +369,16 @@ def check_tool_poisoning(
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        tool_name (str): The tool name to analyze or process.
+        tool_description (str): The tool description to analyze or process.
+        tool_source (str): The tool source to analyze or process.
+        has_signature_verification (bool): The has signature verification to analyze or process.
+        has_description_hash (bool): The has description hash to analyze or process.
+        from_trusted_registry (bool): The from trusted registry to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -453,6 +483,20 @@ def check_excessive_agency(
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        agent_name (str): The agent name to analyze or process.
+        tools_available (int): The tools available to analyze or process.
+        tools_used_in_task (int): The tools used in task to analyze or process.
+        has_approval_gates (bool): The has approval gates to analyze or process.
+        has_scope_limits (bool): The has scope limits to analyze or process.
+        can_access_filesystem (bool): The can access filesystem to analyze or process.
+        can_access_network (bool): The can access network to analyze or process.
+        can_execute_code (bool): The can execute code to analyze or process.
+        can_modify_data (bool): The can modify data to analyze or process.
+        can_send_communications (bool): The can send communications to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -552,6 +596,18 @@ def check_data_leakage(
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        agent_name (str): The agent name to analyze or process.
+        has_context_isolation (bool): The has context isolation to analyze or process.
+        has_session_boundaries (bool): The has session boundaries to analyze or process.
+        has_pii_detection (bool): The has pii detection to analyze or process.
+        has_output_sanitization (bool): The has output sanitization to analyze or process.
+        shares_memory_across_users (bool): The shares memory across users to analyze or process.
+        logs_contain_user_data (bool): The logs contain user data to analyze or process.
+        third_party_data_sharing (bool): The third party data sharing to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
