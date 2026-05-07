@@ -151,7 +151,23 @@ def assess_agent_security(
     caller: str = "",
     api_key: str = "",
 ) -> str:
-    """Full OWASP Agentic AI Top 10 security assessment."""
+    """Full OWASP Agentic AI Top 10 security assessment.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     if err := _check_auth(api_key):
         return err
     if err := _rl(caller):
@@ -209,7 +225,23 @@ def check_prompt_injection(
     caller: str = "",
     api_key: str = "",
 ) -> str:
-    """Check text for prompt injection attack patterns."""
+    """Check text for prompt injection attack patterns.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     if err := _check_auth(api_key):
         return err
     if err := _rl(caller):
@@ -273,7 +305,23 @@ def check_tool_poisoning(
     caller: str = "",
     api_key: str = "",
 ) -> str:
-    """Check a tool for name/description manipulation (tool poisoning)."""
+    """Check a tool for name/description manipulation (tool poisoning).
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     if err := _check_auth(api_key):
         return err
     if err := _rl(caller):
@@ -347,7 +395,23 @@ def check_excessive_agency(
     caller: str = "",
     api_key: str = "",
 ) -> str:
-    """Assess agent for excessive permissions (least privilege)."""
+    """Assess agent for excessive permissions (least privilege).
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     if err := _check_auth(api_key):
         return err
     if err := _rl(caller):
@@ -416,7 +480,23 @@ def check_data_leakage(
     caller: str = "",
     api_key: str = "",
 ) -> str:
-    """Assess cross-context data exposure risks."""
+    """Assess cross-context data exposure risks.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     if err := _check_auth(api_key):
         return err
     if err := _rl(caller):
