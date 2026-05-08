@@ -1,95 +1,59 @@
-[![owasp-agentic-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/owasp-agentic-mcp/badges/score.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/owasp-agentic-mcp)
-[![MCP Registry](https://img.shields.io/badge/MCP_Registry-Published-green)](https://registry.modelcontextprotocol.io)
-[![PyPI](https://img.shields.io/pypi/v/owasp-agentic-mcp)](https://pypi.org/project/owasp-agentic-mcp/)
-
-[![owasp-agentic-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/owasp-agentic-mcp/badges/card.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/owasp-agentic-mcp)
-
 <div align="center">
 
-[![PyPI](https://img.shields.io/pypi/v/owasp-agentic-mcp)](https://pypi.org/project/owasp-agentic-mcp/)
-[![Downloads](https://img.shields.io/pypi/dm/owasp-agentic-mcp)](https://pypi.org/project/owasp-agentic-mcp/)
-[![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/owasp-agentic-mcp)](https://github.com/CSOAI-ORG/owasp-agentic-mcp/stargazers)
+# Owasp Agentic MCP
+
+**MCP server for owasp agentic mcp operations**
+
+[![PyPI](https://img.shields.io/pypi/v/meok-owasp-agentic-mcp)](https://pypi.org/project/meok-owasp-agentic-mcp/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-
-# OWASP Agentic AI MCP
-
-**Security assessment against the OWASP Top 10 for Agentic AI (2025). Prompt injection detection, tool poisoning checks, excessive agency evaluation, and data leakage analysis.**
-
-[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-224+_servers-purple)](https://meok.ai)
-
-[Install](#install) · [Tools](#tools) · [Pricing](#pricing) · [Attestation API](#attestation-api)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-MCP_Server-purple)](https://meok.ai)
 
 </div>
 
----
+## Overview
 
-## Why This Exists
-
-The OWASP Top 10 for Agentic AI (released 2025) defines the ten most critical security risks for AI agents that can take actions, use tools, and operate autonomously. As organisations deploy MCP servers, LangChain agents, and autonomous AI workflows, these systems face attack vectors that traditional AppSec testing does not cover.
-
-Prompt injection, tool poisoning, excessive agency, and cross-context data leakage are not theoretical: they are actively exploited. CISOs and security teams need a structured way to assess agentic AI deployments against the OWASP classification. This MCP evaluates your agent architecture against all 10 risk categories and produces actionable findings.
-
-## Install
-
-```bash
-pip install owasp-agentic-mcp
-```
+Owasp Agentic MCP provides AI-powered tools via the Model Context Protocol (MCP).
 
 ## Tools
 
-| Tool | OWASP Reference | What it does |
-|------|----------------|--------------|
-| `assess_agent_security` | All 10 risks | Full security posture assessment against OWASP Top 10 for Agentic AI |
-| `check_prompt_injection` | Risk A01 | Detect prompt injection attack vectors in agent inputs |
-| `check_tool_poisoning` | Risk A02 | Evaluate tool definitions and MCP configs for poisoning risks |
-| `check_excessive_agency` | Risk A03 | Assess whether agent has more permissions than needed |
-| `check_data_leakage` | Risk A06 | Identify cross-context data leakage paths in agent workflows |
+| Tool | Description |
+|------|-------------|
+| `assess_agent_security` | Full OWASP Agentic AI Top 10 security assessment. |
+| `check_prompt_injection` | Check text for prompt injection attack patterns. |
+| `check_tool_poisoning` | Check a tool for name/description manipulation (tool poisoning). |
+| `check_excessive_agency` | Assess agent for excessive permissions (least privilege). |
+| `check_data_leakage` | Assess cross-context data exposure risks. |
 
-## Example
+## Installation
 
-```
-Prompt: "Assess the security of our customer support AI agent.
-It has access to 12 MCP tools including database queries, email
-sending, and file system access. It operates on user prompts
-with no input sanitisation."
-
-Result: Assessment across all 10 OWASP Agentic AI risks with critical
-findings: A01 prompt injection (no input sanitisation on user prompts),
-A02 tool poisoning (3 MCP tools loaded without integrity checks),
-A03 excessive agency (file system + email + database = over-privileged),
-A06 data leakage (database query results passed through to email tool
-without redaction). Remediation priorities and control recommendations
-provided for each finding.
+```bash
+pip install meok-owasp-agentic-mcp
 ```
 
-## Pricing
+## Usage with Claude Desktop
 
-| Tier | Price | What you get |
-|------|-------|-------------|
-| **Free** | £0 | 10 calls/day — agent security assessment |
-| **Pro** | £199/mo | Unlimited + HMAC-signed attestations + verify URLs |
-| **Enterprise** | £1,499/mo | Multi-tenant + co-branded reports + webhooks |
+Add to your Claude Desktop MCP config (`claude_desktop_config.json`):
 
-[Subscribe to Pro](https://buy.stripe.com/14A4gB3K4eUWgYR56o8k836) · [Enterprise](https://buy.stripe.com/4gM9AV80kaEG0ZT42k8k837)
-
-## Attestation API
-
-Every Pro/Enterprise audit produces a cryptographically signed certificate:
-
-```
-POST https://meok-attestation-api.vercel.app/sign
-GET  https://meok-attestation-api.vercel.app/verify/{cert_id}
+```json
+{
+  "mcpServers": {
+    "owasp-agentic-mcp": {
+      "command": "python",
+      "args": ["-m", "meok_owasp_agentic_mcp.server"]
+    }
+  }
+}
 ```
 
-Zero-dep verifier: `pip install meok-attestation-verify`
+## Usage with FastMCP
 
-## Links
+```python
+from mcp.server.fastmcp import FastMCP
 
-- Website: [meok.ai](https://meok.ai)
-- All MCP servers: [meok.ai/labs/mcp/servers](https://meok.ai/labs/mcp/servers)
-- Enterprise support: nicholas@csoai.org
+# This server exposes 5 tool(s) via MCP
+# See server.py for full implementation
+```
 
 ## License
 
-MIT
-<!-- mcp-name: io.github.CSOAI-ORG/owasp-agentic-mcp -->
+MIT © [MEOK AI Labs](https://meok.ai)
