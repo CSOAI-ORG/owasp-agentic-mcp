@@ -1,0 +1,23 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "owasp-agentic-mcp",
+    "description": "Owasp Agentic MCP Server by MEOK AI Labs",
+    "version": "1.0.6",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "owasp-agentic-mcp"
+      }
+    ],
+    "capabilities": [
+      "assess_agent_security",
+      "check_prompt_injection",
+      "check_tool_poisoning",
+      "check_excessive_agency",
+      "check_data_leakage"
+    ]
+  }
+}

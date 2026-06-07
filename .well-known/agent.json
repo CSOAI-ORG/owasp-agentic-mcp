@@ -1,0 +1,68 @@
+{
+  "name": "owasp-agentic-mcp",
+  "description": "Owasp Agentic MCP Server by MEOK AI Labs",
+  "url": "https://proofof.ai/scorecard/owasp-agentic-mcp.html",
+  "version": "1.0.6",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "assess_agent_security",
+      "name": "Assess Agent Security",
+      "description": "assess_agent_security via owasp-agentic-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "check_prompt_injection",
+      "name": "Check Prompt Injection",
+      "description": "check_prompt_injection via owasp-agentic-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "check_tool_poisoning",
+      "name": "Check Tool Poisoning",
+      "description": "check_tool_poisoning via owasp-agentic-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "check_excessive_agency",
+      "name": "Check Excessive Agency",
+      "description": "check_excessive_agency via owasp-agentic-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "check_data_leakage",
+      "name": "Check Data Leakage",
+      "description": "check_data_leakage via owasp-agentic-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}
