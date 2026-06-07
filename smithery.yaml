@@ -1,34 +1,32 @@
 name: owasp-agentic-mcp
-description: 'OWASP Top 10 for AI Agents security assessment tools. Capabilities: full agent security scan, prompt injection detection, tool poisoning check, excessive agency, data leakage. Built by MEOK AI Labs.'
-version: 1.0.0
+description: "OWASP Top 10 for Agentic AI security assessment - prompt injection detection, tool poisoning analysis, excessive agency evaluation, and cross-context data leakage assessment"
+version: 1.0.5
+author: MEOK AI Labs
+homepage: https://safetyof.ai
+repository: https://github.com/MEOK-AI-Labs/owasp-agentic-mcp
+license: MIT
+categories:
+  - security
+  - ai-safety
+  - governance
+
 tools:
-- name: assess_agent_security
-  description: Full OWASP Agentic AI Top 10 security assessment
-  parameters:
-  - name: caller
-    type: string
-    required: false
-- name: check_prompt_injection
-  description: Check text for prompt injection attack patterns
-  parameters:
-  - name: caller
-    type: string
-    required: false
-- name: check_tool_poisoning
-  description: Check a tool for name/description manipulation
-  parameters:
-  - name: caller
-    type: string
-    required: false
-- name: check_excessive_agency
-  description: Assess agent for excessive permissions (least privilege)
-  parameters:
-  - name: caller
-    type: string
-    required: false
-- name: check_data_leakage
-  description: Assess cross-context data exposure risks
-  parameters:
-  - name: caller
-    type: string
-    required: false
+  - name: assess_agent_security
+    description: "Full OWASP Agentic AI Top 10 security assessment with per-risk pass/fail, overall risk rating, and critical risk identification"
+  - name: check_prompt_injection
+    description: "Check text for prompt injection attack patterns including instruction override, jailbreak attempts, system prompt extraction, and encoding attacks"
+  - name: check_tool_poisoning
+    description: "Check a tool for name/description manipulation that could exploit agent tool-use behavior, including coercive language and trust verification"
+  - name: check_excessive_agency
+    description: "Assess agent for excessive permissions using least privilege analysis - evaluates dangerous capabilities, tool utilization, and approval gates"
+  - name: check_data_leakage
+    description: "Assess cross-context data exposure risks including session boundary enforcement, PII detection, output sanitization, and third-party sharing"
+
+build:
+  type: python
+  entrypoint: server.py
+  dependencies:
+    - mcp>=1.0.0
+
+runtime:
+  python: ">=3.10"

@@ -8,6 +8,15 @@
 > OWASP Top 10 for Agentic AI security MCP server — prompt injection detection, tool poisoning, exc...
 
 OWASP Top 10 for Agentic AI security MCP server — prompt injection detection, tool poisoning, excessive agency, data leakage assessment
+<div align="center">
+
+# OWASP Agentic MCP
+
+**OWASP Top 10 for AI Agents Security Assessment — Prompt Injection, Tool Poisoning, Data Leakage**
+
+[![MCP](https://img.shields.io/badge/MCP-Server-blue)](https://github.com/CSOAI-ORG)
+[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+</div>
 
 ---
 
@@ -76,3 +85,79 @@ MIT © [CSOAI-ORG](https://github.com/CSOAI-ORG)
 <p align="center">
   <sub>Built with 💜 by <a href="https://meok.ai">MEOK AI Labs</a> · UK Companies House 16939677</sub>
 </p>
+Security assessment tools based on the OWASP Top 10 for AI Agents. Scan agent configurations for prompt injection vulnerabilities, tool poisoning risks, excessive agency, data leakage, and more.
+
+## Tools
+
+| Tool | Description | Parameters |
+|------|-------------|------------|
+| `full_agent_scan` | Full OWASP Agentic Top 10 security scan | `agent_config`, `tools`, `permissions` |
+| `assess_agentic_security` | Assess against specific OWASP Agentic categories | `categories`, `agent_config` |
+| `check_prompt_injection` | Test for prompt injection vulnerabilities | `system_prompt`, `user_input_template` |
+| `check_tool_poisoning` | Check for tool poisoning risks | `tool_definitions`, `input_validation` |
+| `check_excessive_agency` | Assess agency level vs minimum required | `allowed_tools`, `required_tools`, `permissions` |
+
+## Installation
+
+```bash
+pip install mcp
+```
+
+### Claude Desktop / Cursor / VS Code / Windsurf
+```json
+{
+  "mcpServers": {
+    "owasp-agentic": {
+      "command": "python",
+      "args": ["path/to/server.py"]
+    }
+  }
+}
+```
+
+## Usage Examples
+
+### Full agent security scan
+```json
+{
+  "agent_config": {
+    "system_prompt": "You are a helpful assistant that can access email, calendar, and file system.",
+    "allowed_tools": ["send_email", "read_calendar", "write_file"]
+  },
+  "permissions": ["email:send", "calendar:read", "files:write"]
+}
+```
+
+### Check prompt injection
+```json
+{
+  "system_prompt": "You are a financial advisor bot",
+  "user_input_template": "{user_query} Please provide investment advice."
+}
+```
+
+## Pricing
+
+- **Free:** 10 scans/day
+- **Pro:** $99/mo — unlimited scans + detailed reports
+- **Enterprise:** $499/mo — continuous monitoring + custom rules
+
+---
+
+*Built by MEOK AI Labs | [meok.ai](https://meok.ai)*
+
+<!-- BUY-LADDER:START -->
+
+## 💸 Try MEOK in 30 seconds — instant buy ladder
+
+| Tier | Price | What you get | Stripe |
+|---|---|---|---|
+| Smoke test | **£1** | Signed sample MCP-Hardening report + Article 50 PDF | <https://buy.stripe.com/dRmcN75ScdQS7oh1Uc8k90U> |
+| Quick Kit | **£9** | EU AI Act Article 50 implementation guide (C2PA + EU-Icon) | <https://buy.stripe.com/cNi00la8s1460ZT0Q88k90V> |
+| Founder Call | **£29** | 30-min 1-on-1 with the founder | <https://buy.stripe.com/8x228ta8s6oqbExaqI8k90W> |
+
+> Refundable. UK Stripe — VAT-clean. Builds on the 81-MCP MEOK fleet.
+> Verify any signed report at <https://meok.ai/verify>.
+
+<!-- BUY-LADDER:END -->
+

@@ -22,8 +22,14 @@ from collections import defaultdict
 from mcp.server.fastmcp import FastMCP
 
 # ── Authentication ──────────────────────────────────────────────
-sys.path.insert(0, os.path.expanduser("~/clawd/meok-labs-engine/shared"))
-from auth_middleware import check_access
+try:
+    from meok_auth import check_access
+except ImportError:
+    try:
+        from auth_middleware import check_access
+    except ImportError:
+        def check_access(api_key: str) -> tuple:
+            return (True, "Open access", "community")
 
 _MEOK_API_KEY = os.environ.get("MEOK_API_KEY", "")
 

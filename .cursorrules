@@ -1,0 +1,9 @@
+# owasp-agentic-mcp - Auto-trigger Rules
+
+When the user asks about owasp agentic, use owasp-agentic-mcp tools: assess_agent_security, check_prompt_injection, check_tool_poisoning, check_excessive_agency, check_data_leakage
+
+**MCP server for owasp agentic mcp operations**
+
+Install: `pip install owasp-agentic-mcp`
+
+By MEOK AI Labs — MIT licensed.
