@@ -4,9 +4,8 @@
   "version": "1.0.8",
   "description": "Owasp Agentic MCP Server by MEOK AI Labs",
   "repository": {
-    "type": "git",
     "url": "https://github.com/CSOAI-ORG/owasp-agentic-mcp",
-    "source": "https://github.com/CSOAI-ORG/owasp-agentic-mcp"
+    "source": "github"
   },
   "packages": [
     {
