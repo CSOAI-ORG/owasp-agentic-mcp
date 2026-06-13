@@ -1,0 +1,117 @@
+{
+  "name": "Owasp Agentic Mcp",
+  "version": "1.0.6",
+  "url": "https://mcp.meok.ai/owasp-agentic-mcp/a2a",
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "stateTransitionHistory": false
+  },
+  "protocolVersion": "0.3.0",
+  "description": "OWASP Top 10 for AI Agents security assessment tools. Capabilities: full agent security scan, prompt injection detection, tool poisoning check, excessive agency, data leakage. Built by MEOK AI Labs.",
+  "provider": {
+    "organization": "MEOK AI LABS",
+    "url": "https://meok.ai"
+  },
+  "defaultInputModes": [
+    "application/json",
+    "text/plain"
+  ],
+  "defaultOutputModes": [
+    "application/json",
+    "text/plain"
+  ],
+  "skills": [
+    {
+      "id": "assess_agent_security",
+      "name": "Assess Agent Security",
+      "description": "Assess Agent Security — a tool of the owasp-agentic-mcp MCP.",
+      "tags": [
+        "security",
+        "agent"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "check_prompt_injection",
+      "name": "Check Prompt Injection",
+      "description": "Check Prompt Injection — a tool of the owasp-agentic-mcp MCP.",
+      "tags": [
+        "security",
+        "agent"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "check_tool_poisoning",
+      "name": "Check Tool Poisoning",
+      "description": "Check Tool Poisoning — a tool of the owasp-agentic-mcp MCP.",
+      "tags": [
+        "security",
+        "agent"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "check_excessive_agency",
+      "name": "Check Excessive Agency",
+      "description": "Check Excessive Agency — a tool of the owasp-agentic-mcp MCP.",
+      "tags": [
+        "security",
+        "agent"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "check_data_leakage",
+      "name": "Check Data Leakage",
+      "description": "Check Data Leakage — a tool of the owasp-agentic-mcp MCP.",
+      "tags": [
+        "security",
+        "agent"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    }
+  ],
+  "documentationUrl": "https://meok.ai",
+  "x-meok": {
+    "mcp_name": "owasp-agentic-mcp",
+    "verifier": "https://proofof.ai/verify",
+    "governed_by": "CSOAI 52-article charter"
+  }
+}
