@@ -3,7 +3,7 @@ description: "OWASP Top 10 for Agentic AI security assessment - prompt injection
 version: 1.0.5
 author: MEOK AI Labs
 homepage: https://safetyof.ai
-repository: https://github.com/MEOK-AI-Labs/owasp-agentic-mcp
+repository: https://github.com/CSOAI-ORG/owasp-agentic-mcp
 license: MIT
 categories:
   - security
